@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var Product_1 = require("./Product");
+var Operations_1 = require("./Operations");
+var cart = [];
+var obj = new Operations_1.Operations();
+obj.add(cart, new Product_1.Product(1, "Pencil", 100));
+obj.add(cart, new Product_1.Product(2, "Pen", 50));
+obj.add(cart, new Product_1.Product(3, "Book", 150));
+obj.add(cart, new Product_1.Product(4, "Note Book", 200));
+console.log("-----------Added Products in Cart-----------");
+obj.display(cart);
+console.log("--------After Remove id 2 from cart:----------");
+cart = obj.remove(cart, 2);
+obj.display(cart);
